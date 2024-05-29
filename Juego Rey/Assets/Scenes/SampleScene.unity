@@ -319,6 +319,8 @@ MonoBehaviour:
   col1: {fileID: 8565483301542096623, guid: 3a9b6745d815a463ca460b5fddf41158, type: 3}
   piedra1: {fileID: 7715445610138459879, guid: facef30d4e7794a88a0be255cf432f30, type: 3}
   piedra2: {fileID: 3576011388943989747, guid: 121e20f53e41b478889fc002f67a7b75, type: 3}
+  cactusl: {fileID: 6337221800901262383, guid: c617080e48a69384cb1b16d6ec8c8263, type: 3}
+  cactusg: {fileID: 4173914663166322658, guid: 5f088a70a5630a947a47224b642d0246, type: 3}
   start: 0
   gameOver: 0
   menuInicio: {fileID: 3638889}

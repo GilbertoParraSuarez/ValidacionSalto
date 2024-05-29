@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Obstaculo
   - Suelo
+  - Fauna
   layers:
   - Default
   - TransparentFX

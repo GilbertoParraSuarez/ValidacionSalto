@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     public GameObject col1;
     public GameObject piedra1;
     public GameObject piedra2;
+public GameObject cactusl;
+public GameObject cactusg;
     public bool start = false;
     public bool gameOver = false;
 
@@ -18,6 +20,7 @@ public class GameManager : MonoBehaviour
 
     public List<GameObject> suelo;
     public List<GameObject> obstaculos;
+    
 
     private void Start()
     {
@@ -30,6 +33,8 @@ public class GameManager : MonoBehaviour
         //Crear Obstaculos
         obstaculos.Add(Instantiate(piedra1, new Vector2(15, -2), Quaternion.identity));
         obstaculos.Add(Instantiate(piedra2, new Vector2(20, -2), Quaternion.identity));
+        obstaculos.Add(Instantiate(cactusl, new Vector2(25, -2.10f), Quaternion.identity));
+        obstaculos.Add(Instantiate(cactusg, new Vector2(30, -2.25f), Quaternion.identity));
     }
 
     private void Update()
@@ -55,7 +60,7 @@ public class GameManager : MonoBehaviour
             menuInicio.SetActive(false);
             menuInicio.SetActive(false);
             //Mover BG
-            bg.material.mainTextureOffset = bg.material.mainTextureOffset + new Vector2(0.015f, 0) * velocidad * Time.deltaTime;
+            bg.material.mainTextureOffset = bg.material.mainTextureOffset + new Vector2(0.01f, 0) * velocidad * Time.deltaTime;
 
             // Mover Mapa
             for (int i = 0; i < suelo.Count; i++)
@@ -72,11 +77,12 @@ public class GameManager : MonoBehaviour
             {
                 if (obstaculos[i].transform.position.x <= -10)
                 {
-                    float randomObs = Random.Range(10, 18);
+                    float randomObs = Random.Range(10, 40);
                     obstaculos[i].transform.position = new Vector3(randomObs, -2, 0);
                 }
                 obstaculos[i].transform.position = obstaculos[i].transform.position + new Vector3(-1, 0, 0) * velocidad * Time.deltaTime;
             }
+
         }
     }
 

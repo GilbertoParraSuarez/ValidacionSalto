@@ -49,5 +49,6 @@ public class Jugador : MonoBehaviour
         {
             gameManager.gameOver = true;
         }
+
     }
 }
